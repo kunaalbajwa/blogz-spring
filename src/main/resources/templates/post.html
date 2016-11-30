@@ -6,7 +6,12 @@
 
 	<div th:replace="template :: navigation"></div>
 
-	<!-- TODO - display a single blog post -->
+	<!--done TODO - display a single blog post -->
+	
+	
+	<p th:text= "${post.title}"></p>
+	<p th:text= "${post.body}"></p>
+<p>Written by <a th:href="'/blog/' +  ${post.author.username}" th:text= "${post.author.username}"></a> on <span th:text ="${#dates.format(post.created, 'yyyy-MM-dd')}"></span></p>
 
 </body>
-</html>
+</html> 
